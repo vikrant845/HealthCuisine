@@ -1,0 +1,286 @@
+<div class="container">
+    <app-user-navigation></app-user-navigation>
+    <h1 class="welcome">Welcome {{ user.username }}.</h1>
+    <div class="dashboard_container">
+        <!-- <div class="menu">
+            <div class="item">
+                <img src="../../../assets/metric.png" alt="progress">
+                <span>Your Progress</span>
+            </div>
+            <div class="item">
+                <img src="../../../assets/shopping-bag.png" alt="progress">
+                <span>Subscription</span>
+            </div>
+            <div class="item">
+                <img src="../../../assets/meal.png" alt="progress">
+                <span>My Nutrition</span>
+            </div>
+            <div class="item">
+                <img src="../../../assets/weight.png" alt="progress">
+                <span>My Workouts</span>
+            </div>
+            <div class="item">
+                <img src="../../../assets/gift.png" alt="progress">
+                <span>My Rewards</span>
+            </div>
+            <div class="item">
+                <img src="../../../assets/question.png" alt="progress">
+                <span>Help</span>
+            </div>
+            <div class="item">
+                <img src="../../../assets/logout.png" alt="progress">
+                <span>Logout</span>
+            </div>
+        </div> -->
+        <app-sidebar></app-sidebar>
+        <div class="dashboard">
+            <div class="progress">
+                <mat-progress-spinner [value]="user.goal" diameter="150" strokeWidth="15"></mat-progress-spinner>
+                <span>{{ user.goal }}%</span>
+                <p>Goal Acheived</p>
+            </div>
+            <div class="personal_record_container">
+                <div class="personal_record">
+                    <div class="header">
+                        <img src="../../../assets/box.png" alt="">
+                        <h1>Squat</h1>
+                    </div>
+                    <div class="numbers">
+                        <p>125KG</p>
+                        <p>6 Reps</p>
+                    </div>
+                    <div class="info">
+                        <p>Form: &nbsp;&nbsp;&nbsp;Average</p>
+                        <p>Spotter: No</p>
+                    </div>
+                </div>
+                <div class="personal_record">
+                    <div class="header">
+                        <img src="../../../assets/box.png" alt="">
+                        <h1>Squat</h1>
+                    </div>
+                    <div class="numbers">
+                        <p>125KG</p>
+                        <p>6 Reps</p>
+                    </div>
+                    <div class="info">
+                        <p>Form: &nbsp;&nbsp;&nbsp;Average</p>
+                        <p>Spotter: No</p>
+                    </div>
+                </div>
+                <div class="personal_record">
+                    <div class="header">
+                        <img src="../../../assets/box.png" alt="">
+                        <h1>Squat</h1>
+                    </div>
+                    <div class="numbers">
+                        <p>125KG</p>
+                        <p>6 Reps</p>
+                    </div>
+                    <div class="info">
+                        <p>Form: &nbsp;&nbsp;&nbsp;Average</p>
+                        <p>Spotter: No</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_row">
+                <div class="chart">
+                    <div class="reminders">
+                        <div class="reminder">
+                            <p>Workout reminder</p>
+                            <mat-slide-toggle></mat-slide-toggle>
+                        </div>
+                        <div class="reminder">
+                            <p>Water reminder</p>
+                            <mat-slide-toggle></mat-slide-toggle>
+                        </div>
+                    </div>
+                    <canvas id="pie_chart">{{ pieChart }}</canvas>
+                </div>
+                <img src="../../../assets/Remaining Dashboard.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="nutrition_container">
+        <div class="title">
+            My Nutrition
+        </div>
+        <div class="nutrition">
+            <div class="nutrition_content">
+                <div class="title">Breakfast</div>
+                <div class="nutrition_items">
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Oatmeal.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Oatmeal</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Egg toast.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Eggs</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Upma.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Upma</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nutrition_content">
+                <div class="title">Breakfast</div>
+                <div class="nutrition_items">
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Oatmeal.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Oatmeal</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Egg toast.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Eggs</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Upma.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Upma</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nutrition_content">
+                <div class="title">Breakfast</div>
+                <div class="nutrition_items">
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Oatmeal.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Oatmeal</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Egg toast.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Eggs</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                    <div class="nutrition_item">
+                        <div class="image">
+                            <img src="../../../assets/Upma.jpg" alt="oats">
+                        </div>
+                        <div class="information">
+                            <p>Upma</p>
+                            <p>Preparation Time: 20 Minutes</p>
+                            <p>Ingredients: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimal</p>
+                            <p>Calories: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="workouts_container">
+        <div class="title">
+            My Workouts
+        </div>
+        <div class="workouts">
+            <div class="workout">
+                <div class="image">
+                    <img src="../../../assets/alonso-reyes-0HlI76m4jxU-unsplash.jpg" alt="">
+                </div>
+                <div class="information">
+                    <p>Kettlebell Trouble</p>
+                    <p>45 Minutes</p>
+                    <p>Medium</p>
+                </div>
+                <button>Start</button>
+            </div>
+            <div class="workout">
+                <div class="image">
+                    <img src="../../../assets/alonso-reyes-0HlI76m4jxU-unsplash.jpg" alt="">
+                </div>
+                <div class="information">
+                    <p>Kettlebell Trouble</p>
+                    <p>45 Minutes</p>
+                    <p>Medium</p>
+                </div>
+                <button>Start</button>
+            </div>
+            <div class="workout">
+                <div class="image">
+                    <img src="../../../assets/alonso-reyes-0HlI76m4jxU-unsplash.jpg" alt="">
+                </div>
+                <div class="information">
+                    <p>Kettlebell Trouble</p>
+                    <p>45 Minutes</p>
+                    <p>Medium</p>
+                </div>
+                <button>Start</button>
+            </div>
+            <div class="workout">
+                <div class="image">
+                    <img src="../../../assets/alonso-reyes-0HlI76m4jxU-unsplash.jpg" alt="">
+                </div>
+                <div class="information">
+                    <p>Kettlebell Trouble</p>
+                    <div class="subinformation">
+                        <img src="../../../assets/stopwatch.png" alt="">
+                        <p>45 Minutes</p>
+                    </div>
+                    <div class="subinformation">
+                        <img src="../../../assets/signal.png" alt="">
+                        <p>Medium</p>
+                    </div>
+                </div>
+                <button>Start</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="error" *ngIf="error !== ''">
+    {{ error }}
+</div> -->

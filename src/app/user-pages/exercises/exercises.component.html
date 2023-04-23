@@ -1,0 +1,30 @@
+<div class="container">
+    <app-user-navigation></app-user-navigation>
+    <div class="search">
+        <input type="text" placeholder="Search..." (keyup)="search($any($event), currentPage)">
+        <button (click)="search($any($event), currentPage)">Search</button>
+    </div>
+    <div class="paginator">
+        <button class="prev" (click)="prevNext('prev')">Prev</button>
+        <div class="square" [class]="i === currentPage ? 'active': ''" *appFromTo="{ from, to };let i = i;">{{i}}</div>
+        <button class="next" (click)="prevNext('next')">Next</button>
+    </div>
+    <div *ngIf="!error" class="exercises">
+        <div class="card" (click)="exerciseClick(exercise)" *ngFor="let exercise of exercises">
+            <ion-icon (click)="onLikeUnlike($event, exercise._id); $event.stopPropagation()" [name]="getLikedUnliked(exercise)"></ion-icon>
+            <div class="information">
+                <h1>{{ exercise.exerciseName | titlecase }}</h1>
+                <p>{{ exercise.bodyPart | titlecase }} Exercise</p>
+                <p>Equipment Required: {{ exercise.equipment | titlecase }}</p>
+            </div>
+            <img src="{{ exercise.gifUrl }}" alt="{{ exercise.exerciseName }}">
+        </div>
+    </div>
+    <div *ngIf="error" class="err">
+        {{ error.status === 0 ? 'Cant connect to the server' : '' }}
+        <p *ngIf="error?.error?.error">
+            {{ error?.error?.error?.name === 'JsonWebTokenError' ? 'Sorry you are not logged in' : '' }}
+            {{ error.error.error.name === 'TokenExpiredError' ? 'Your token has been expired. Please Login Again' : '' }}
+        </p>
+    </div>
+</div>

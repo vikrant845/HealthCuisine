@@ -1,0 +1,431 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container .logo-text {
+    font-family: 'Lobster';
+    font-size: 1.5rem;
+    color: #413d6b;
+    margin: 0 63rem 0 0;
+}
+
+.container nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    background: #ffbd87;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+}
+
+.container nav ul {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+}
+
+.container nav ul li {
+    margin: 0 1rem 0 0;
+    list-style-type: none;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: #413d6b;
+}
+
+.workouts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.workouts .workouts__workout-types {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.workouts__workout-types .workout-types__box {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    background: #413d6b;
+    margin: 2.5rem 0 0 2.5rem;
+    color: #ffbd87;
+}
+
+.workouts__workout-types .workout-types__box .street {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    font-size: 7rem;
+    font-weight: 500;
+    margin: 0 0 0 3rem;
+}
+
+.workouts__workout-types .workout-types__box .street p {
+    margin: 2rem 0 0 0;
+}
+
+.workouts__workout-types .workout-types__box .street .front-text {
+    position: relative;
+    z-index: 2;
+}
+
+.workouts__workout-types .workout-types__box .workouts {
+    display: flex;
+    flex-direction: row;
+    font-size: 6rem;
+    font-weight: 300;
+    margin: 6rem 0 0 3rem;
+}
+
+.workouts__workout-types .workout-types__box .workouts .w {
+    position: relative;
+    z-index: 2;
+}
+
+.workouts__workout-types .workout-types__box img {
+    width: 20rem;
+    z-index: 1;
+}
+
+.workouts__workout-types .workout-types__box img.street-image {
+    position: absolute;
+    top: -5rem;
+    left: 2rem;
+    z-index: 11;
+}
+
+.workouts__workout-types .workout-types__box .typography_container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 6rem;
+    color: #413d6b;
+    overflow: hidden;
+    text-shadow: 2px 0 #ffbd87, -2px 0 #ffbd87, 0 2px #ffbd87, 0 -2px #ffbd87,
+    1px 1px #ffbd87, -1px -1px #ffbd87, 1px -1px #ffbd87, -1px 1px #ffbd87;
+    opacity: 0.24;
+}
+
+.workouts__workout-types .workout-types__box .typography_container .street_typography1 {
+    position: absolute;
+    top: 1rem;
+    left: -5rem;
+    transform: rotate(-50deg);
+}
+
+.workouts__workout-types .workout-types__box .typography_container .street_typography2 {
+    position: absolute;
+    bottom: 2.5rem;
+    right: -5rem;
+    transform: rotate(130deg);
+}
+
+.workouts__workout-types .workout-types__box .typography_container .street_typography3 {
+    position: absolute;
+    top: 10rem;
+    left: 3rem;
+    font-size: 12rem;
+    transform: rotate(130deg);
+}
+
+.workouts__workout-types .workout-types__box .typography_container .street_typography4 {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    font-size: 12rem;
+    transform: rotate(-50deg);
+}
+
+.workouts .workouts__workout-types .workout-types__box img.conditioning-image {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 5rem;
+}
+
+.workout-types__box .condit {
+    position: relative;
+    top: 2.5rem;
+    left: 1rem;
+    display: flex;
+    font-size: 6.5rem;
+    font-weight: 700;
+}
+
+.workout-types__box .condit .con, .workout-types__box .ioning .ning {
+    position: relative;
+    z-index: 3;
+}
+
+.workout-types__box .condit .dit, .workout-types__box .ioning .io {
+    position: relative;
+    z-index: 1;
+}
+
+.workout-types__box .ioning {
+    position: relative;
+    top: 0;
+    left: 1rem;
+    display: flex;
+    font-size: 9rem;
+    font-weight: 300;
+}
+
+.workout-types__box .circles {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.workout-types__box .below-text {
+    position: relative;
+    bottom: 2rem;
+    left: 1.6rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.8rem;
+    z-index: 3;
+}
+
+.workout-types__box .circles img {
+    position: absolute;
+    top: 0;
+}
+
+.workout-types__box .circles img:nth-child(1) {
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    width: 14rem;
+}
+
+.workout-types__box .circles img:nth-child(2) {
+    position: absolute;
+    top: 7rem;
+    right: 2rem;
+    width: 8rem;
+}
+
+.workout-types__box .circles img:nth-child(3) {
+    position: absolute;
+    left: 3rem;
+    top: 18rem;
+    width: 6rem;
+}
+
+.workout-types__box .circles img:nth-child(4) {
+    position: absolute;
+    left: 8rem;
+    top: 25rem;
+    width: 2rem;
+}
+
+.workout-types__box .circles img:nth-child(5) {
+    position: absolute;
+    top: 20rem;
+    right: 2rem;
+    width: 6rem;
+}
+
+
+.container img.trending {
+    width: 95%;
+    margin: 6rem 0 0 0;
+}
+
+.container .trending-workouts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container .workout-card {
+    position: relative;
+    width: 24rem;
+    height: 12rem;
+    background: #413d6b;
+    color: #ffbd87;
+}
+
+.container .workout-card img {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    width: 10rem;
+}
+
+.container .workout-card .increase {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #f06e03;
+}
+
+.container .workout-card .your {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    font-size: 2rem;
+    font-weight: 200;
+    color: #f06e03;
+}
+
+.container .workout-card .pull {
+    position: absolute;
+    top: 5rem;
+    left: 9rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #f06e03;
+}
+
+.container .workout-card .strength {
+    position: absolute;
+    top: 7rem;
+    left: 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container .trending-workouts .workout-card:nth-child(2) img {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    width: 18rem;
+}
+
+.container .trending-workouts .workout-card .soul {
+    position: absolute;
+    left: 1.5rem;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.container .trending-workouts .workout-card .yoga {
+    position: absolute;
+    left: 8.5rem;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.container .trending-workouts .workout-card .enhancing {
+    position: absolute;
+    top: 3.2rem;
+    left: 1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+
+.container .footer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 2rem 0 0 0;
+    padding: 2rem 0 0 0;
+}
+
+.container .footer .links {
+    font-weight: 500;
+    display: flex;
+}
+
+.container .footer .links .link_set2 {
+    width: 40%;
+}
+
+.container .footer .links h1 {
+    font-family: 'Lobster';
+    font-size: 2rem;
+}
+
+.container .footer .links ul {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0 0 0 10rem;
+}
+
+.container .footer .links ul li {
+    margin: 0 0 1rem 0;
+}
+
+.container .footer .links ul li a {
+    text-decoration: none;
+    color: #413d6b;
+}
+
+.container .footer .links .newsletter {
+    width: 40%;
+    margin: 0 0 0 10rem;
+}
+
+.container .footer .links .newsletter .action {
+    display: flex;
+    margin: 1rem 0 0 0;
+}
+
+.container .footer .links .newsletter .action input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #413d6b;
+    width: 60%;
+    height: 2rem;
+}
+
+.container .footer .links .newsletter .action img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.3rem 0 0 0;
+}
+
+.container .footer .social_media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    align-self: center;
+}
+
+.container .footer .social_media h1 {
+    margin: 6rem 0 3rem 0;
+}
+
+.container .footer .social_media .social_media_icons {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .footer .social_media .social_media_icons img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.container .footer .social_media .social_media_icons img:nth-child(1),
+.container .footer .social_media .social_media_icons img:nth-child(2) {
+    width: 6rem;
+    height: 6rem;
+
+}

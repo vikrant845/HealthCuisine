@@ -1,0 +1,598 @@
+.container {
+    background: url('../../assets/Background.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter';
+    /* overflow: hidden; */
+}
+/* .container nav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+}
+
+.container nav ul li {
+    margin: 0 1rem 0 0;
+    list-style-type: none;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: #413d6b;
+} */
+
+.container .hero-text {
+    font-family: "Lobster";
+    margin-top: 10%;
+    font-size: 120px;
+    color: #413d6b;
+    display: flex;
+    height: 8rem;
+    overflow: hidden;
+}
+
+.container .top-text {
+    font-family: "Inter Light";
+    align-self: flex-start;
+    margin: 0 0 0 5rem;
+    height: fit-content;
+    overflow: hidden;
+    width: 25%;
+}
+
+.container .top-text h1 span {
+    font-family: "Inter Medium";
+}
+
+.container .bottom-text {
+    margin: 12rem 0 0 5rem;
+    align-self: flex-start;
+    justify-self: flex-end;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.container .buttons {
+    min-width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: -2.5rem 5rem 0 0;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.container .buttons button {
+    font-family: 'Inter SemiBold';
+    color: #efc5fb;
+    background: none;
+    width: 40%;
+    padding: 0.5rem;
+    border: 3px solid #daea72;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 3.5rem;
+}
+
+.container .buttons button:hover {
+    border: 3px solid #dce0c3;
+}
+
+.container .section-benefits {
+    display: flex;
+    margin: 4rem 0 0 0;
+}
+
+.container .section-benefits img {
+    max-width: 50%;
+    min-height: 20%;
+}
+
+.container .section-benefits .benefits {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    background: #f2cf93;
+}
+
+.container .section-benefits .benefits h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 2rem auto 0 auto;
+    letter-spacing: 5px;
+}
+
+.container .section-benefits .benefits .benefit-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem 0 0 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container .section-benefits .benefits .benefit-list .benefit-list-row1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .section-benefits .benefits .benefit-list .benefit-list-row2 {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0 0 0;
+}
+
+.container .section-benefits .benefits .benefit img {
+    width: 12rem;
+    height: 6rem;
+}
+
+.container .image-slideshow {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .slideshow-container {
+    margin: 5rem 0 0 0;
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 200%;
+    overflow-x: hidden;
+}
+
+.container .image-slideshow .image {
+    border: none;
+    border-radius: 60px;
+    width: 19rem;
+    overflow: hidden;
+}
+
+.container .image-slideshow img {
+    height: 38rem;
+}
+
+.container .image-slideshow .image:nth-child(1) img, .container .image-slideshow .image:nth-child(5) img {
+    object-position: -21rem 0;
+}
+
+.container .image-slideshow .image:nth-child(2) img, .container .image-slideshow .image:nth-child(6) img {
+    object-position: -4rem 0;
+}
+
+.container .image-slideshow .image:nth-child(3) img, .container .image-slideshow .image:nth-child(7) img {
+    object-position: -14rem 0;
+}
+
+.container .image-slideshow .image:nth-child(4) img, .container .image-slideshow .image:nth-child(8) img {
+    object-position: -24rem 0;
+}
+
+.container .workouts {
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.container .workouts .image {
+    position: relative;
+    border: none;
+    border-radius: 60px;
+    width: 27rem;
+    height: 16rem;
+    overflow: hidden;
+}
+
+.container .workouts .image img {
+    width: 28rem;
+    height: 17rem;
+}
+
+.container .workouts .image p {
+    font-family: 'Inter Medium';
+    font-size: 1.2rem;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    color: #FFF;
+}
+
+.container .descriptive-text {
+    width: 90%;
+    margin: 4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .descriptive-text h1 {
+    margin: 0 0 2rem 0;
+    font-family: 'Inter SemiBold';
+    font-size: 3rem;
+}
+
+.container .descriptive-text p {
+    line-height: 2rem;
+}
+
+.container .cards {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 0 0 0;
+    width: 100%;
+}
+
+.container .cards .background-belt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 100%;
+    height: 50%;
+    background: #8c0632;
+    z-index: 1;
+}
+
+.container .cards .card {
+    position: relative;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18rem;
+    min-height: 23rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 2;
+}
+
+.container .cards .card h3 {
+    margin: 1rem 0 1rem 0;
+}
+
+.container .cards .card p {
+    margin: 1rem 0 0 0;
+    padding: 0 1rem 0 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.container .cards .card .image {
+    width: 12rem;
+    height: 12rem;
+    background: #FFF;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container .cards .card .image img {
+    object-position: -5rem 0;
+    height: 12rem;
+}
+
+.container .cards .card a {
+    color: #413d6b;
+    margin: 1rem 0 1rem 0;
+}
+
+.container .information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 35rem;
+    background: #fc8a1b;
+    margin: 5rem 0 0 0;
+}
+
+.container .information .content {
+    margin: 0 0 0 8rem;
+    width: 30%;
+}
+
+.container .information .content h1 {
+    font-family: 'Inter SemiBold';
+    font-size: 3rem;
+}
+
+.container .information .content p {
+    margin: 2rem 0 0 0;
+    line-height: 1.8rem;;
+}
+
+.container .information .image {
+    margin: 0 8rem 0 0;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container .information .image img {
+    height: 25rem;
+}
+
+.container .merits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 5rem 0 0 0;
+}
+
+.container .merits .merit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .merits .merit img {
+    width: 11rem;
+}
+
+.container .merits .merit p {
+    margin: 2rem 0 0 0;
+    text-align: center;
+    width: 14rem;
+    font-size: 1.2rem;
+}
+
+.container .big-text {
+    font-size: 3rem;
+    margin: 5rem 0 0 0;
+    color: #fc8a1b;
+    text-align: center;
+}
+
+.password_reset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password_reset .title {
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    align-self: center;
+    margin: 3rem 0 0 0;
+}
+
+.password_reset .title span {
+    font-style: italic;
+    color: #fc8a1b;
+}
+
+.password_reset p:nth-child(3) {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 90%;
+    margin: 3rem 0 0 0;
+    border: 2px solid #fc8a1b;
+    border-radius: 2rem;
+    box-shadow: rgba(65, 61, 107, 0.5) 0px 7px 29px 0px;
+    padding: 3rem;
+}
+
+.password_reset p:nth-child(3) a {
+    font-style: italic;
+    color: #413d6b;
+    cursor: pointer;
+}
+
+.password_reset p:nth-child(4) {
+    font-size: 3rem;
+    font-weight: 600;
+    width: 90%;
+    margin: 3rem 0 0 0;
+    text-align: center;
+}
+
+.password_reset .logo {
+    font-family: 'Lobster';
+    font-size: 6rem;
+    margin: 3rem 0 0 0;
+}
+
+@media screen and (max-width: 960px) {
+    .container .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 4rem 0 6rem 0;
+    }
+
+    .container .buttons button {
+        width: 25%;
+    }
+
+    .container .hero-text {
+        margin: 0 0 0 0;
+        font-size: 6rem;
+    }
+
+    .container .top-text {
+        width: 60%;
+        font-size: 0.7rem;
+        margin: 10rem 0 0 15%;
+        height: fit-content;
+    }
+
+    .container .bottom-text {
+        font-size: 0.8rem;
+        margin: 0 0 0 20rem;
+    }
+
+    .container .section-benefits .benefits h1 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .container .section-benefits .benefits .benefit-list .benefit:nth-child(1) img {
+        width: 30%;
+        height: 30%;
+    }
+
+    .container .section-benefits img {
+        width: 50%;
+        height: 23rem;
+    }
+
+    .container .section-benefits {
+        margin: 6rem 0 0 0;
+    }
+
+    .container .section-benefits .benefits .benefit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    .container .section-benefits .benefits .benefit-list .benefit:nth-child(2) img {
+        width: 30%;
+        height: 30%;
+    }
+
+    .section-benefits .benefits {
+        height: 23rem;
+    }
+    
+    .container .section-benefits .benefits .benefit-list .benefit-list-row2 .benefit {
+        margin: -5rem 0 0 0;
+    }
+
+    .container .image-slideshow .slideshow-container .image {
+        height: 20rem;
+        width: 10%;
+        overflow: hidden;
+    }
+
+    .container .image-slideshow .slideshow-container .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container .image-slideshow .slideshow-container .image:nth-child(1) img {
+        object-position: -11rem 0;
+    }
+
+    .container .image-slideshow .slideshow-container .image:nth-child(2) img {
+        object-position: -2.5rem 0;
+    }
+    
+    .container .image-slideshow .slideshow-container .image:nth-child(3) img {
+        object-position: -7.5rem 0;
+    }
+
+    .container .image-slideshow .slideshow-container .image:nth-child(4) img {
+        object-position: -12rem 0;
+    }
+
+    .container .workouts .image {
+        width: 30%;
+        height: 12rem;
+    }
+
+    .container .workouts .image img {
+        width: 140%;
+        height: 100%;
+        object-position: -4rem 0;
+    }
+    
+    .container .workouts .image p {
+        font-size: 1rem;
+    }
+
+    .container .descriptive-text p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    .container .descriptive-text h1 {
+        margin: 0 0 1rem 0;
+    }
+
+    .container .cards .card {
+        width: 28%;
+        height: 14rem;
+    }
+
+    .container .cards .card .image {
+        width: 75%;
+        height: 60%;
+    }
+
+    .container .card p {
+        height: 30%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 7;
+        overflow: hidden;
+    }
+    
+    .container .information {
+        position: relative;
+    }
+
+    .container .information .content {
+        margin: 0 0 0 0;
+        width: 50%;
+    }
+    
+    .container .information .content h1 {
+        position: absolute;
+        top: 1rem;
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 2rem 0 0 0;
+    }
+
+    .container .information .content p {
+        margin: 0 0 0 4rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .container .information .image {
+        width: 40%;
+        height: 18rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 1rem 0 0;
+    }
+
+    .information .image img {
+        width: 100%;
+        height: 100%;
+    }
+}

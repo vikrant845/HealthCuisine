@@ -1,0 +1,12 @@
+<div class="container">
+    <app-user-navigation></app-user-navigation>
+    <div class="title" *ngIf="exercise !== undefined">
+        <h1>{{ exercise.exerciseName | titlecase }}</h1>
+        <!-- <img src="../../../assets/heart.png" alt=""> -->
+        <ion-icon (click)="onLikeUnlike($event)" [name]="getLikedUnliked()" [@bounce]="liked"></ion-icon>
+    </div>
+    <img src="{{ exercise ? exercise.gifUrl: undefined }}" alt="exercise">
+    <button (click)="addToOngoing(exercise ? exercise._id : undefined)">{{ user.ongoingWorkouts.includes(exercise ? exercise._id : undefined) ? 'Remove From' : 'Add To' }} Ongoing</button>
+    <div class="information">
+    </div>
+</div>

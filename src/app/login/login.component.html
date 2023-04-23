@@ -1,0 +1,46 @@
+<div class="container">
+    <app-navigation></app-navigation>
+    <div class="login_container">
+        <div class="image">
+            <img src="../../assets/login page image.png" alt="workout_and_nutrition_image">
+        </div>
+        <div class="form_container">
+            <h1>LOGIN</h1>
+            <div class="input">
+                <p>Username</p>
+                <input #username [class]="error != undefined ? 'error' : ''" type="text">
+            </div>
+            <div class="input">
+                <p>Password</p>
+                <input #password [class]="error != undefined ? 'error' : ''" type="password">
+            </div>
+            <p (click)="changing_password = !changing_password">Forgot Password?</p>
+            <p>Or Login Using</p>
+            <button (click)="login()">Login</button>
+            <div class="auth_actions">
+                <div class="action">
+                    <img src="../../assets/google.png" alt="login with google">
+                </div>
+                <div class="action">
+                    <img src="../../assets/facebook 1.png" alt="login with facebook">
+                </div>
+                <div class="action">
+                    <img src="../../assets/microsoft 1.png" alt="login with microsoft">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="forgetPassword" (click)="changing_password = !changing_password" *ngIf="changing_password">
+    <div class="form_container" (click)="$event.stopPropagation()">
+        <h1>Forgot Password</h1>
+        <div class="inputs">
+            <div class="input">
+                <p>Username</p>
+                <input #username type="text">
+            </div>
+        </div>
+        <button (click)="forgotPassword(username.value)">Submit</button>
+    </div>
+</div>

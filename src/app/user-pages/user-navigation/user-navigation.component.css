@@ -1,0 +1,180 @@
+:host {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background: #ffbd87;
+}
+
+nav .logo-text {
+    font-family: 'Lobster';
+    font-size: 1.5rem;
+    margin: 0 0 0 3rem;
+}
+
+nav .logo-text a {
+    text-decoration: none;
+    color: #413d6b;
+}
+
+nav .search {
+    width: 50%;
+    background: #ffd1ab;
+    border-radius: 0.4rem;
+}
+
+nav .right_section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav .search input, nav .search input:focus {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0.3rem;
+    color: #413d6b;
+    font-weight: 600;
+}
+
+nav .profile {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 2rem 0 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav .profile::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    background: #FFF;
+    transform: scale(0);
+    transition: transform 250ms;
+}
+
+nav .profile:hover::after, nav .account_actions:hover {
+    transform: scale(1);
+}
+
+nav .profile img {
+    width: 100%;
+}
+
+nav .profile a {
+    position: relative;
+    z-index: 10;
+}
+
+nav .right_section .results {
+    position: absolute;
+    top: 4rem;
+    z-index: 2;
+    background: #FFF;
+    width: 80%;
+    height: 8rem;
+    border: 2px solid #413d6b;
+    border-radius: 1rem;
+    overflow: scroll;
+}
+
+nav .right_section a {
+    text-decoration: none;
+    color: #413d6b;
+    font-size: 0.9rem;
+}
+
+nav .right_section .results p {
+    width: 100%;
+    height: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.2rem;
+}
+
+nav .account_actions {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    width: 16rem;
+    height: 6rem;
+    border-radius: 1.5rem;
+    border: 2px solid #413d6b;
+    background: #FFF;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform 500ms;
+    overflow: hidden;
+}
+
+nav .profile:hover ~ .account_actions {
+    transform-origin: right;
+    transform: scale(1);
+}
+
+nav .account_actions:hover a:hover {
+    background: #f2cf93;
+    transition: background-color 500ms;
+}
+
+nav .account_actions ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav .account_actions ul a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 1rem;
+    height: 3rem;
+    width: 100%;
+    border-bottom: 2px solid #fc8a1b;
+    text-decoration: none;
+    color: #413d6b;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+nav .account_actions ul a:last-child {
+    border: none;
+}
+
+nav .account_actions ul a ion-icon {
+    margin: 0 1rem 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+    nav .right_section {
+        width: 70%;
+    }
+}

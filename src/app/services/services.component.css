@@ -1,0 +1,644 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    align-items: center;
+    min-height: 100vh;
+    color: #413d6b;
+}
+
+.container .workout_section {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+}
+
+.container .workout_section img {
+    width: 10%;
+}
+
+.container .workout_section .title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 2rem 0 0 0;
+}
+
+.container .workout_section .title::before {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    width: 10%;
+    height: 0.2rem;
+    background: #f06e03;
+    border-radius: 10%;
+}
+
+.container .workout_section .title::after {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    width: 10%;
+    height: 0.2rem;
+    background: #f06e03;
+    border-radius: 10%;
+}
+
+.container .workout_section .title p:nth-child(2) {
+    margin: -1rem 0 0 3rem;
+    font-weight: 400;
+}
+
+.container .workout_section .view_all {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+}
+
+.container .workout_section .view_all img {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0 0 1rem;
+    filter: invert(24%) sepia(6%) saturate(4860%) hue-rotate(206deg) brightness(92%) contrast(88%);;
+}
+
+.container .workout_section .workout_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 4rem 0 0 0;
+}
+
+.container .workout_section .workout_container .workout {
+    display: flex;
+    width: 30%;
+    height: 15rem;
+    background: linear-gradient(43deg, #ffbd87, #f06e03);
+    border-radius: 2rem;
+}
+
+.container .workout_section .workout_container .workout img {
+    width: 17rem;
+    height: 17rem;
+    margin: -3rem 0 0 1rem;
+    filter: drop-shadow(0 0 0.75rem #000);
+}
+
+.container .workout_section .workout_container .workout:nth-child(2) img {
+    width: 9rem;
+    height: 18rem;
+    margin: -2rem 6rem 0 1rem;
+    filter: drop-shadow(0 0 0.75rem #000);
+}
+
+.container .workout_section .workout_container .workout:nth-child(3) img {
+    width: 17rem;
+    height: 17rem;
+    margin: -3rem 3rem 0 -0.3rem;
+    filter: drop-shadow(0 0 0.75rem #000);
+}
+
+.container .workout_section .workout_container .workout p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 40%;
+    margin: 2rem 0 0 -2rem;
+}
+
+.container .workout_section .workout_container .workout p span {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.container .nutrition_section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 4rem 0 0 0;
+}
+
+.container .nutrition_section .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+.container .nutrition_section .title p:nth-child(1) {
+    font-size: 5.5rem;
+    font-weight: 300;
+    letter-spacing: -0.3rem;
+}
+
+.container .nutrition_section .title p:nth-child(2) {
+    font-size: 16rem;
+    font-weight: 600;
+    transform: rotate(-90deg);
+    margin: 5rem 0 0 0;
+}
+
+.container .nutrition_section .flyer1 {
+    position: relative;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0 0 0;
+    color: #FFF;
+    overflow: hidden;
+}
+
+.container .nutrition_section .flyer1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #413d6b;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.container .nutrition_section .flyer1 img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.container .nutrition_section .flyer1 .title {
+    position: relative;
+    align-items: flex-end;
+    align-self: flex-end;
+    margin: 1rem 1rem 0 0;
+    width: 60%;
+    font-weight: 500;
+    font-size: 4rem;
+    z-index: 3;
+}
+
+.container .nutrition_section .flyer1 .title::before {
+    content: '';
+    position: absolute;
+    left: -6rem;
+    height: 95%;
+    width: 0.15rem;
+    border-radius: 50%;
+    background: #f06e03;
+    z-index: 4;
+}
+
+.container .nutrition_section .flyer1 .paragraph::before {
+    content: '';
+    position: absolute;
+    right: -6.5rem;
+    height: 100%;
+    width: 0.15rem;
+    border-radius: 50%;
+    background: #f06e03;
+    z-index: 4;
+}
+
+.container .nutrition_section .flyer1 .title span:not(:first-child) {
+    margin: -0.8rem 0 0 0;
+}
+
+.container .nutrition_section .flyer1 .title span:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+.container .nutrition_section .flyer1 .paragraph {
+    position: relative;
+    width: 55%;
+    font-size: 0.9rem;
+    margin: 0 0 1rem 1.5rem;
+    z-index: 3;
+}
+
+.container .nutrition_section .flyer1:nth-child(3) .title span:nth-child(1) {
+    font-family: 'Lobster';
+    font-size: 2rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #FFF;
+}
+
+.container .nutrition_section .flyer1:nth-child(3) .title span:nth-child(3) {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 1rem 0 0;
+}
+
+.container .nutrition_section .flyer1:nth-child(3) .paragraph {
+    margin: 2.5rem 0 0 1.5rem;
+}
+
+.container .shop_container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: flex-start;
+    margin: 8rem 0 0 0;
+}
+
+.container .shop_container .title {
+    display: flex;
+    flex-direction: column;
+    font-size: 6rem;
+}
+
+.container .shop_container .title p:nth-child(2) {
+    font-size: 13rem;
+    font-weight: 600;
+    margin: -2.5rem 0 0 0;
+}
+
+.container .shop_container .item_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .shop_container .item_container .item {
+    position: relative;;
+    width: 30%;
+    height: 16rem;
+    border-radius: 2rem;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+}
+
+.container .shop_container .item_container .item img {
+    width: 100%;
+}
+
+.container .shop_container .item_container .item:nth-child(3) img {
+    object-position: 0 -12rem;
+}
+
+.container .shop_container .item_container .item span {
+    position: absolute;
+    left: 14%;
+    top: 36%;
+    font-size: 4rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 2px #FFF;
+    z-index: 2;
+}
+
+.container .shop_container .item_container .item:nth-child(2) span {
+    position: absolute;
+    left: 20%;
+    top: 36%;
+}
+
+.container .shop_container .item_container .item:nth-child(3) span {
+    position: absolute;
+    left: 28%;
+    top: 36%;
+}
+
+.container .shop_container .item_container .item:nth-child(5) span {
+    position: absolute;
+    transform: scale(0.8);
+    top: 36%;
+    left: -2%;
+}
+
+.container .shop_container .item_container .item:nth-child(6) span {
+    position: absolute;
+    left: 8%;
+    top: 36%;
+}
+
+.container .certifications_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 0 3rem 0;
+}
+
+.container .certifications_section .title, .container .pricing_section .title {
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+
+.container .certifications_section .title span, .container .pricing_section .title span {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 3px solid #f06e03;
+    border-radius: 50%;
+    margin: 0 1.5rem 0 0;
+}
+
+.container .certifications_section .title span::before, .container .pricing_section .title span::before {
+    content: '';
+    position: absolute;
+    top: 46%;
+    right: 1rem;
+    width: 130%;
+    height: 0.15rem;
+    background: #f06e03;
+}
+
+.container .certifications_section .title p, .container .pricing_section .title p {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.container .certifications_section .certifications {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
+}
+
+.container .certifications_section .certifications .certification {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8rem;
+    background: #413d6b;
+    border-radius: 2rem;
+    color: #FFF;
+    font-weight: 300;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px inset;
+    margin: 0 0 1rem 0;
+}
+
+.container .certifications_section .certifications .certification img {
+    height: 60%;
+}
+
+.container .certifications_section .certifications .certification:nth-child(2) img {
+    height: 40%;
+}
+
+.container .certifications_section .certifications .certification button img {
+    filter: invert(93%) sepia(79%) saturate(0%) hue-rotate(13deg) brightness(102%) contrast(104%);
+    height: 30%;
+}
+
+.container .certifications_section .certifications .certification button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 10%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    color: #FFF;
+    background: #f06e03;
+    cursor: pointer;
+}
+
+.container .pricing_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.container .pricing_section .title {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.container .pricing_section .pricings {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-self: center;
+    margin: 3rem 0 3rem 0;
+}
+
+.container .pricing_section .pricings .pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    height: 35rem;
+    background: #413d6b;
+    border-radius: 2rem;
+    color: #ffbd87;
+}
+
+.container .pricing_section .pricings .pricing:nth-child(2) {
+    transform: scale(1.1);
+}
+
+.container .pricing_section .pricings .pricing .plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40%;
+    margin: 1rem 0 0 0;
+    border-radius: 2rem;
+    background: linear-gradient(-43deg, rgba(252, 109, 24, 0.51), #413d6b 65%);
+    box-shadow: #ffbd87 1.95px 0.5px 5px;
+}
+
+.container .pricing_section .pricings .pricing .plan p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.container .pricing_section .pricings .pricing .plan p:nth-child(2) {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.container .pricing_section .pricings .pricing .features {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 2rem;
+    padding-bottom: 1rem;
+}
+
+.container .pricing_section .pricings .pricing .features::before, .container .pricing_section .pricings .pricing .features::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 0.1rem;
+    background: #ffbd87;
+}
+
+.container .pricing_section .pricings .pricing .features::after {
+    width: 10%;
+    height: 0.3rem;
+    margin: 0 0 -0.2rem 0;
+}
+
+.container .pricing_section .pricings .pricing .features .feature {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin: 0 0 0.3rem 0;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.container .pricing_section .pricings .pricing .features .feature img {
+    filter: invert(46%) sepia(52%) saturate(5657%) hue-rotate(14deg) brightness(109%) contrast(98%);
+    width: 5%;
+    margin: 0 1rem 0 0;
+}
+
+.container .pricing_section .pricings .pricing button {
+    width: 35%;
+    height: 2rem;
+    border: none;
+    border-radius: 2rem;;
+    background: #ffbd87;
+    margin: 3rem 0 0 0;
+    font-weight: 600;
+    color: #413d6b;
+}
+
+@media screen and (max-width: 1200px) {
+    .container .workout_section .title {
+        font-size: 2rem;
+    }
+    
+    .container .workout_section .title::before {
+        bottom: 0.5rem;
+        width: 20%;
+    }
+    
+    .container .workout_section .title::after {
+        top: 2.5rem;
+        width: 20%;
+    }
+    
+    .container .workout_section .title p:nth-child(2) {
+        margin: -0.5rem 0 0 3rem;
+    }
+    
+    .container .workout_section .workout_container .workout {
+        width: 48%;
+        height: 12rem;
+        margin: 1.5rem 0 0 0;
+    }
+    
+    .container .workout_section .workout_container .workout img {
+        width: 14rem;
+        height: 14rem;
+        margin: -1.6rem 0 0 0.3rem;
+    }
+    
+    .container .workout_section .workout_container .workout:nth-child(2) img {
+        width: 6rem;
+        height: 14rem;
+        margin: -1.1rem 6rem 0 1rem;
+        filter: drop-shadow(0 0 0.75rem #000);
+    }
+    
+    .container .workout_section .workout_container .workout:nth-child(3) img {
+        width: 13rem;
+        height: 13rem;
+        margin: -1rem 3rem 0 -0.3rem;
+        filter: drop-shadow(0 0 0.75rem #000);
+    }
+    
+    .container .nutrition_section .title {
+        margin: 0 0 0 2rem;
+    }
+    
+    .container .nutrition_section .flyer1 {
+        width: 50%;
+    }
+    
+    .container .shop_container .title {
+        font-size: 4rem;
+    }
+    
+    .container .shop_container .title p:nth-child(2) {
+        font-size: 7rem;
+        margin: -1rem 0 0 0;
+    }
+    
+    .container .shop_container .item_container .item {
+        height: 8rem;
+    }
+    
+    .container .shop_container .item_container .item span {
+        font-size: 2rem;
+    }
+
+    .container .certifications_section .title span, .container .pricing_section .title span {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .container .certifications_section .title span::before, .container .pricing_section .title span::before {
+        right: 0.75rem;
+    }
+    
+    .container .certifications_section .title p, .container .pricing_section .title p {
+        font-size: 2rem;
+    }
+    
+    .container .certifications_section .certifications {
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        flex-wrap: wrap;
+        margin: 2rem 0 0 0;
+    }
+    
+    .container .certifications_section .certifications .certification {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 40%;
+        height: 15rem;
+    }
+    
+    .container .certifications_section .certifications .certification img {
+        height: 20%;
+    }
+    
+    .container .certifications_section .certifications .certification:nth-child(2) img {
+        height: 20%;
+    }
+
+    .container .certifications_section .certifications .certification p {
+        font-size: 0.9rem;
+    }
+
+    .container .certifications_section .certifications .certification p:nth-child(3) {
+        width: 80%;
+    }
+    
+    .container .certifications_section .certifications .certification button {
+        width: 35%;
+        height: 1.5rem;
+    }
+    
+    .container .pricing_section .pricings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container .pricing_section .pricings .pricing {
+        width: 90%;
+        margin: 2rem;
+        height: 40rem;
+    }
+}

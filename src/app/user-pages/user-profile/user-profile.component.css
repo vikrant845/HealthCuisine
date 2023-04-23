@@ -1,0 +1,357 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container .welcome {
+    font-size: 6rem;
+    font-weight: 600;
+    margin: 2rem 0 2rem 1rem;
+}
+
+.container .dashboard_container {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 90%;
+}
+
+.container .dashboard_container .dashboard {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    background: #413d6b;
+    box-shadow: rgba(50, 50, 93, 0.6) 0px 50px 100px -20px, rgba(0, 0, 0, 0.8) 0px 30px 60px -30px;
+    padding: 2rem;
+    height: fit-content;
+}
+
+.container .dashboard_container .dashboard .progress {
+    position: relative;
+    color: #ffbd87;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .dashboard_container .dashboard .progress span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.container .dashboard_container .dashboard .progress::ng-deep .mat-progress-spinner circle {
+    stroke: #ffbd87;
+}
+
+.container .dashboard_container .dashboard .progress p {
+    position: absolute;
+    top: 120%;
+    font-weight: 600;
+}
+
+.container .dashboard_container .dashboard .personal_record_container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 70%;
+    height: 25%;
+}
+
+.container .dashboard_container .dashboard .personal_record_container .personal_record {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%;
+    border-radius: 2rem;
+    background: #FFF;
+    box-shadow: rgba(255, 189, 135, 0.35) 0px 5px 15px;
+}
+
+.container .dashboard_container .dashboard .personal_record_container .personal_record .header {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+}
+
+.container .dashboard_container .dashboard .personal_record_container .personal_record .header img {
+    height: 70%;
+}
+
+.container .dashboard_container .dashboard .personal_record_container .personal_record .header h1 {
+    font-size: 1.3rem;
+    margin: 0 1.5rem 0 0;
+}
+
+.container .dashboard_container .dashboard .personal_record_container .personal_record .numbers {
+    font-size: 1.8rem;
+    margin: -2rem 0 0 0;
+}
+
+.container .dashboard_container .dashboard .personal_record_container .personal_record .numbers p:nth-child(1) {
+    font-weight: 700;
+}
+
+.container .dashboard_container .dashboard .personal_record_container .personal_record .info {
+    align-self: flex-start;
+    margin: 0 0 1rem 2rem;
+    font-size: 0.8rem;
+}
+
+.container .dashboard_container .dashboard .bottom_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container .dashboard_container .dashboard .bottom_row .chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    margin: 3rem 0 0 0;
+}
+
+.container .dashboard_container .dashboard .bottom_row .chart .reminders {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container .dashboard_container .dashboard .bottom_row .chart .reminders .reminder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffbd87;
+    width: 70%;
+    margin: 1rem 0 0 0;
+}
+
+.container .dashboard_container .dashboard .bottom_row .chart .reminders .reminder::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background: #ffbd87;
+}
+
+.container .dashboard_container .dashboard .bottom_row .chart .reminders .reminder::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background: #FFF;
+}
+
+.container .dashboard_container .dashboard .bottom_row .chart .reminders .reminder::ng-deep .mat-slide-toggle.mat-unchecked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background: #413d6b;
+}
+
+.container .dashboard_container .dashboard .bottom_row .chart canvas {
+    margin: 2rem 0 0 0;
+}
+
+.container .dashboard_container .dashboard .bottom_row img {
+    width: 70%;
+    margin: 5rem 0 0 0;
+}
+
+.container .nutrition_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 4rem 0 0 23%;
+    width: 70%;
+}
+
+.nutrition_container .title {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.nutrition_container .nutrition {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0 0 0;
+}
+
+.nutrition_container .nutrition .nutrition_content {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 0.8rem;
+}
+
+.nutrition_container .nutrition .nutrition_content .title {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.nutrition_container .nutrition .nutrition_content .image {
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.nutrition_container .nutrition .nutrition_content .image img {
+    object-position: 0 -2rem;
+    width: 100%;
+}
+
+.nutrition_container .nutrition .nutrition_content .nutrition_item:nth-child(3) .image img {
+    transform: scale(2.2);
+    object-position: 0 1rem;
+    width: 100%;
+}
+
+.nutrition_container .nutrition .nutrition_content .nutrition_items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0 0 0;
+}
+
+.nutrition_container .nutrition .nutrition_content .nutrition_item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 2rem 0;
+}
+
+.nutrition_container .nutrition .nutrition_content .nutrition_item:nth-child(1):before, .nutrition_container .nutrition .nutrition_content .nutrition_item:nth-child(2):before {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    width: 100%;
+    height: 0.05rem;
+    background: #565656;
+}
+
+.nutrition_item .information p {
+    margin: 0 0 0.3rem 0;
+}
+
+.nutrition_item .information p:nth-child(1) {
+    font-weight: 600;
+}
+
+.workouts_container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 70%;
+    margin: 4rem 0 0 16%;
+}
+
+.workouts_container .title {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.workouts_container .workouts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.workouts_container .workouts .workout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    margin: 1rem 0 0 0;
+}
+
+.workouts_container .workouts .workout img {
+    object-position: 0 -2rem;
+    width: 100%;
+}
+
+.workouts_container .workouts .workout .image {
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.workouts_container .workouts .workout .image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.workouts_container .workouts .workout .information {
+    position: absolute;
+    bottom: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 4rem;
+    background: linear-gradient(transparent, #413d6b);
+    z-index: 2;
+    color: #FFF;
+}
+
+.workouts_container .workouts .workout .information p {
+    width: 60%;
+    font-size: 0.9rem;
+    margin: 1.2rem 0 0 0.8rem;
+}
+
+.workouts_container .workouts .workout .information p:nth-child(1) {
+    width: 90%;
+    font-size: 0.9rem;
+}
+
+.workout button {
+    height: 2rem;
+    width: 100%;
+    background: rgba(65, 61, 107, 0.5);
+    color: #413d6b;
+    margin: 0.8rem 0 0 0;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.workout .information .subinformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.5rem;
+    width: 40%;
+    height: 100%;
+}
+
+.workout .information .subinformation img {
+    filter: invert(96%) sepia(1%) saturate(170%) hue-rotate(4deg) brightness(119%) contrast(100%);
+    width: 30%;
+    height: 40%;
+    object-position: 0 0;
+}
+
+.error {
+    font-weight: 700;
+    font-size: 6rem;
+    opacity: 0.5;
+    margin: 8rem 0;
+}

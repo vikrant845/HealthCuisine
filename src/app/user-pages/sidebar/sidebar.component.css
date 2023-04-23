@@ -1,0 +1,70 @@
+:host {
+    width: 14%;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 2rem 0 0 0;
+}
+
+.menu .item {
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    transform: translateX(0);
+    cursor: pointer;
+    transition: transform 250ms linear;
+}
+
+.menu .item:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: #ffbd87;
+    right: 5%;
+    bottom: -1.5rem;
+}
+
+.menu .item:hover {
+    transform: translateX(0.8rem);
+}
+
+.menu .item:nth-child(2) {
+    margin: 0 0 3rem 0;
+}
+
+.menu .item:nth-child(5)::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: #ffbd87;
+    right: 5%;
+    bottom: -1.5rem;
+}
+
+.menu .item:nth-child(5) {
+    margin: 0 0 3rem 0;
+}
+
+.menu .item img {
+    height: 1rem;
+}
+
+.menu .item span {
+    width: 80%;
+    text-align: left;
+}

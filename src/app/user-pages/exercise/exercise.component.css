@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Lobster';
+    font-size: 4rem;
+    margin: 4rem 0 2rem 0;
+    height: fit-content;
+}
+
+.container .title h1 {
+    width: 80%;
+}
+
+.container .title img {
+    width: 10%;
+    cursor: pointer;
+}
+
+.container button {
+    width: 80%;
+    height: 4rem;
+    background: #413d6b;
+    border: none;
+    font-size: 1.5rem;
+    color: #FFF;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container img {
+    width: 40%;
+}
+
+ion-icon {
+    margin: 0 0 0 4rem;
+    font-size: 8rem;
+    --ionicon-stroke-width: 1rem;
+    color: #ffbd87;
+}
+
+button:disabled {
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 1200px) {
+    .container .title {
+        width: 90%;
+        font-size: 2rem;
+    }
+    
+    ion-icon {
+        font-size: 5rem;
+    }
+}

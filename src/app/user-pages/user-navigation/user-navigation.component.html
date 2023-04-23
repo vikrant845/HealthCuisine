@@ -1,0 +1,31 @@
+<nav #navBar>
+    <div class="logo-text"><a routerLink="/">HealthCuisine</a></div>
+    <div class="right_section">
+        <a routerLink="/user/exercises">All Exercises</a>
+        <div class="search">
+            <input #search type="text" (keyup)="onSearch($event)" placeholder="Search...">
+        </div>
+        <div class="results" *ngIf="exercises != undefined && exercises.length !== 0">
+            <ng-container *ngFor="let exercise of exercises">
+                <a (click)="search.value = ''; exercises = []" [routerLink]="'/user/exercises/' + exercise._id">
+                    <p>{{ exercise.exerciseName | titlecase }}</p>
+                </a>
+            </ng-container>
+        </div>
+        <div class="profile">
+            <img src="{{ user.image }}" alt="">
+        </div>
+        <div class="account_actions">
+            <ul>
+                <a routerLink="/user/profile">
+                    <ion-icon name="person"></ion-icon>
+                    <li>My Profile</li>
+                </a>
+                <a (click)="logout()">
+                    <ion-icon name="log-out"></ion-icon>
+                    <li>Logout</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>

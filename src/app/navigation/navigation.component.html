@@ -1,0 +1,43 @@
+<nav #navBar>
+    <div @fadeIn class="logo-text">HealthCuisine</div>
+    <ul @fadeIn>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+        <li><a routerLink="/workouts" routerLinkActive="active">Workouts</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+        <div class="not_logged_in" *ngIf="!user">
+            <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+            <li><a routerLink="/signup" routerLinkActive="active">Sign Up</a></li>
+        </div>
+        <div class="profile" *ngIf="user">
+            <img src="{{ user.image }}" alt="">
+        </div>
+        <div class="account_actions">
+            <ul>
+                <a routerLink="/user/profile">
+                    <ion-icon name="person"></ion-icon>
+                    <li>My Profile</li>
+                </a>
+                <a (click)="logout()">
+                    <ion-icon name="log-out"></ion-icon>
+                    <li>Logout</li>
+                </a>
+            </ul>
+        </div>
+    </ul>
+    <div class="hamburger" (click)="openMenu($event)">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="menu noDisplay">
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Workouts</li>
+            <li>About Us</li>
+            <li>Login</li>
+            <li>Sign Up</li>
+        </ul>
+    </div>
+</nav>
