@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { Subject, Subscription, catchError, debounceTime, map, of } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Subject, Subscription, catchError, debounceTime, of } from 'rxjs';
 import { ExercisesService } from '../exercises.service';
 import { UserModel } from 'src/models/userModel';
 import { AuthService } from 'src/app/auth.service';

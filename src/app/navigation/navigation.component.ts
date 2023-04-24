@@ -1,4 +1,3 @@
-import { animate, keyframes, query, state, style, transition, trigger } from '@angular/animations';
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { UserModel } from 'src/models/userModel';
@@ -8,25 +7,7 @@ import { Subscription, catchError, of } from 'rxjs';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css'],
-  animations: [
-    trigger('fadeIn', [
-      transition('* => *', [
-        animate('1000ms', keyframes([
-          style({
-            marginTop: '2rem',
-            opacity: 0,
-            offset: 0
-          }),
-          style({
-            marginTop: '*',
-            opacity: 1,
-            offset: 1
-          })
-        ]))
-      ])
-    ])
-  ]
+  styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit, AfterViewInit {
 

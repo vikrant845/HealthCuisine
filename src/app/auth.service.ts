@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserModel } from 'src/models/userModel';
-import * as CryptoJS from 'crypto-js';
+import { AES, enc } from 'crypto-js';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -28,14 +28,14 @@ export class AuthService {
   }
 
   setUser (user: UserModel) {
-    const userEncrypted = CryptoJS.AES.encrypt(JSON.stringify(user), environment.crypto_secret).toString();
+    const userEncrypted = AES.encrypt(JSON.stringify(user), environment.crypto_secret).toString();
     localStorage.setItem('user', userEncrypted);
   }
 
   getUser () {
     let decryptedUser = localStorage.getItem('user');
     if (decryptedUser) {
-      decryptedUser = CryptoJS.AES.decrypt(decryptedUser, environment.crypto_secret).toString(CryptoJS.enc.Utf8);
+      decryptedUser = AES.decrypt(decryptedUser, environment.crypto_secret).toString(enc.Utf8);
       return JSON.parse(decryptedUser);
     }
     return false;

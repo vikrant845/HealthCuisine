@@ -1,7 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import * as CryptoJS from 'crypto-js';
+import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
-import { LoginResponse } from 'src/models/loginResponseModel';
 import { AuthService } from 'src/app/auth.service';
 import { UserModel } from 'src/models/userModel';
 Chart.register(...registerables);
