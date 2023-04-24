@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('password') password!: ElementRef;
   error: any;
   changing_password = false;
-  loginSub!: Subscription;
+  loginSub: Subscription = new Subscription();
   
   constructor(private authService: AuthService, private router: Router) { }
 
