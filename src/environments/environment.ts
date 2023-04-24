@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ROOT_URL: 'http://localhost:3000/api/v1',
+  ROOT_URL: 'https://healthcuisineapi.onrender.com/api/v1',
   crypto_secret: 'NOW_YOU_SEE_ME'
 };
 
