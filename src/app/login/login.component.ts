@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
   error: any;
   changing_password = false;
   loginSub: Subscription = new Subscription();
+  loggingIn = false;
   
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -39,11 +40,13 @@ export class LoginComponent implements OnInit {
     const username = this.username.nativeElement.value;
     const password = this.password.nativeElement.value;
 
+    this.loggingIn = true;
     this.loginSub = this.authService.login(username, password).pipe(catchError(err => {
       this.error = err;
       setTimeout(() => {
         this.error = undefined;
       }, 1000)
+      this.loggingIn = false;
       return of();
     })).subscribe(token => {
       this.error = undefined;
@@ -53,6 +56,7 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/user/profile');
       }
     });
+    this.loggingIn = true;
   }
 
   forgotPassword(username: string) {

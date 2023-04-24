@@ -44,3 +44,7 @@
         <button (click)="forgotPassword(username.value)">Submit</button>
     </div>
 </div>
+
+<div class="loader" *ngIf="loggingIn">
+    <img src="../../assets/loader.png" alt="loader">
+</div>
