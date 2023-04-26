@@ -1,0 +1,72 @@
+<div class="container">
+    <app-navigation></app-navigation>
+    <img src="../../assets/Background 2.png" alt="background">
+    <p class="title">SIGN UP</p>
+    <span></span>
+    <form [formGroup]="signUp" (submit)="onSubmit()">
+        <div class="row">
+            <div class="input">
+                <p class="form_font">First Name *</p>
+                <input formControlName="firstName" type="text" class="form_font">
+                <p class="error" *ngIf="signUp.get('firstName')?.errors">{{ getErrors(signUp.get('firstName')) }}</p>
+            </div>
+            <div class="input">
+                <p class="form_font">Last Name *</p>
+                <input formControlName="lastName" type="text" class="form_font">
+                <p class="error" *ngIf="signUp.get('lastName')?.errors">{{ getErrors(signUp.get('lastName')) }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Age</mat-label>
+                    <mat-select formControlName="age">
+                        <mat-option [value]="i + 1" *ngFor="let i of age">
+                            {{ i + 1 }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-button-toggle-group formControlName="gender">
+                    <mat-button-toggle value="male">Male</mat-button-toggle>
+                    <mat-button-toggle value="female">Female</mat-button-toggle>
+                    <mat-button-toggle value="Won't Disclose">Wont Disclose</mat-button-toggle>
+                </mat-button-toggle-group>
+                <p class="error" *ngIf="signUp.get('gender')?.errors">{{ getErrors(signUp.get('gender')) }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input">
+                <p class="form_font">Email *</p>
+                <input type="text" formControlName="email" class="form_font">
+                <p class="error" *ngIf="signUp.get('email')?.errors">{{ getErrors(signUp.get('email')) }}</p>
+            </div>
+            <div class="input">
+                <p class="form_font">Phone</p>
+                <input type="text" formControlName="phone" class="form_font">
+                <p class="error" *ngIf="signUp.get('phone')?.errors">{{ getErrors(signUp.get('phone')) }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input">
+                <p class="form_font">Password *</p>
+                <input type="password" formControlName="password" class="form_font">
+                <p class="error" *ngIf="signUp.get('password')?.errors">{{ getErrors(signUp.get('password')) }}</p>
+            </div>
+            <div class="input">
+                <p class="form_font">Confirm Password *</p>
+                <input type="password" formControlName="passwordConfirm" class="form_font">
+                <p class="error" *ngIf="signUp.get('passwordConfirm')?.errors">{{ getErrors(signUp.get('passwordConfirm')) }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input">
+                <p class="form_font">Username *</p>
+                <input type="text" formControlName="username" class="form_font">
+                <p class="error" *ngIf="signUp.get('username')?.errors">{{ getErrors(signUp.get('username')) }}</p>
+            </div>
+        </div>
+        <button>Submit</button>
+    </form>
+</div>

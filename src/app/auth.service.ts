@@ -19,6 +19,10 @@ export class AuthService {
     return this.http.post<any>(`${ this.ROOT_URL }/login`, { username, password });
   }
 
+  signup (user: any) {
+    return this.http.post<any>(`${ this.ROOT_URL }/signup`, { ...user })
+  }
+
   validUser() {
     return this.http.post(`${ this.ROOT_URL }/verify`, { token: localStorage.getItem('jwt') });
   }
