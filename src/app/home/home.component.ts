@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
@@ -8,9 +12,72 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
   
+  @ViewChild('container') container!: ElementRef<HTMLDivElement>;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  ngAfterViewInit(): void {
+    this.triggerScrollAnimations();
+  }
+
+  triggerScrollAnimations() {
+    gsap.from(this.container.nativeElement.querySelector('.top-text'), {
+      x: '-4rem',
+      duration: 2,
+      opacity: 0
+    });
+    gsap.from(this.container.nativeElement.querySelector('.bottom-text'), {
+      x: '4rem',
+      duration: 2,
+      opacity: 0
+    });
+    gsap.from(this.container.nativeElement.querySelector('.hero-text'), {
+      clipPath: 'inset(0 0 100% 0)',
+      duration: 2
+    });
+
+    Array.from(this.container.nativeElement.getElementsByClassName('animate')).forEach(element => {
+      gsap.from(element, {
+        duration: 1,
+        y: '-4rem',
+        transformOrigin: 'center center',
+        opacity: 0,
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 80%',
+          toggleActions: 'play none none reset'
+        }
+      });
+    })
+
+    gsap.from(this.container.nativeElement.querySelectorAll('.slideshow-container > .image'), {
+      y: '-3rem',
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.slideshow-container > .image',
+        start: 'top 80%'
+      },
+      stagger: {
+        amount: 2,
+        from: 'start'
+      },
+    });
+
+    gsap.from(this.container.nativeElement.querySelectorAll('.benefit'), {
+      y: '-3rem',
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '.benefit',
+        start: 'top 80%'
+      },
+      stagger: {
+        amount: 2,
+        from: 'start'
+      },
+    });
   }
 
 }

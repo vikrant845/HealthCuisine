@@ -1,6 +1,7 @@
 .container {
     background: url('../../assets/Background.jpg');
     background-repeat: no-repeat;
+    background-size: 100% 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,14 +145,14 @@
 
 .container .image-slideshow {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container .slideshow-container {
     margin: 5rem 0 0 0;
     display: flex;
     align-self: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 200%;
     overflow-x: hidden;
 }
