@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container" #container>
     <app-navigation></app-navigation>
     <div class="login_container">
-        <div class="image">
+        <div class="image animate">
             <img src="../../assets/login page image.png" alt="workout_and_nutrition_image">
         </div>
-        <div class="form_container">
+        <div class="form_container animate">
             <h1>LOGIN</h1>
             <div class="input">
                 <p>Username</p>
@@ -32,7 +32,7 @@
     </div>
 </div>
 
-<div class="forgetPassword" (click)="changing_password = !changing_password" *ngIf="changing_password">
+<div #passwordReset class="forgetPassword" (click)="changing_password = !changing_password" *ngIf="changing_password">
     <div class="form_container" (click)="$event.stopPropagation()">
         <h1>Forgot Password</h1>
         <div class="inputs">

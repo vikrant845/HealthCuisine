@@ -137,6 +137,23 @@ input, input:focus {
     color: #f6bd90;
 }
 
+.loader {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.loader img {
+    width: 8rem;
+    height: 8rem;
+}
+
 ::ng-deep .mat-select-panel {
     background: #f6bd90;
 }

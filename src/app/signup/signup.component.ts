@@ -23,6 +23,8 @@ export class SignupComponent implements OnInit {
     passwordConfirm: new FormControl('', [ Validators.required ]),
     username: new FormControl('', [ Validators.required ])
   });
+
+  signingUp: boolean = false;
   
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -30,6 +32,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
+    this.signingUp = true;
     if (this.signUp.valid) {
       this.values = this.signUp.value;
       console.log(this.signUp.value);
@@ -38,9 +41,11 @@ export class SignupComponent implements OnInit {
           localStorage.setItem('jwt', res.token);
           this.authService.setUser(res.user);
           this.router.navigate(['/user/profile']);
+          this.signingUp = false;
         }
       });
     }
+    this.signingUp = false;
   }
 
   getErrors(control: AbstractControl | null) {
