@@ -20,7 +20,9 @@ export class HomeComponent implements OnInit {
   }
   
   ngAfterViewInit(): void {
-    this.triggerScrollAnimations();
+    setTimeout(() => {
+      this.triggerScrollAnimations();
+    }, 0);
   }
 
   triggerScrollAnimations() {
@@ -78,6 +80,10 @@ export class HomeComponent implements OnInit {
         from: 'start'
       },
     });
+  }
+
+  ngOnDestroy(): void {
+    ScrollTrigger.killAll(true);
   }
 
 }

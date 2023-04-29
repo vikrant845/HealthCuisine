@@ -13,12 +13,14 @@ export class ServicesComponent implements OnInit {
   @ViewChild('container') container!: ElementRef<HTMLDivElement>;
   
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
+  
   ngAfterViewInit(): void {
-    this.triggerScrollAnimations();
+    setTimeout(() => {
+      this.triggerScrollAnimations();
+    }, 0);
   }
 
   triggerScrollAnimations() {
@@ -94,6 +96,10 @@ export class ServicesComponent implements OnInit {
         amount: 0.8
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    ScrollTrigger.killAll(true);
   }
   
 }
