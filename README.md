@@ -1,6 +1,30 @@
+# HealthCuisine A FullStack App (Frontend Part)
+This is the frontend part of this MEAN stack app (HealthCuisine). This is a fitness and nutrition app in progress. Users can search for exercises, like them, there's a dashboard which shows various user details. People need resources to start their fitness journey somewhere. This app can be that resource.
+
+Adding custom workouts, viewing the user posted workouts, adding customized nutrition feature are some of the things to be added in the future.
+
+# Technologies Used
+1. Angular
+2. Node Js
+3. MongoDB
+4. Express Js
+5. Angular Animations
+6. GSAP Library
+7. Angular Material UI Components
+
+# Working demo of the project
+https://health-cuisine.onrender.com/
+
+Login Credentials
+Username: atuny0
+Password: atuny0@123
+
 # HealthCuisine
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+
+## npm install
+Open the folder in vs code and run npm install command in the directory of project. Make sure you have node installed in your computer.
 
 ## Development server
 
