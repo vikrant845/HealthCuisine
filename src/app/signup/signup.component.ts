@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-signup',
@@ -25,10 +28,29 @@ export class SignupComponent implements OnInit {
   });
 
   signingUp: boolean = false;
+  @ViewChild('container') container!: ElementRef;
   
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    gsap.from(this.container.nativeElement.querySelector('.title'), {
+      x: '-2rem',
+      delay: 1,
+      duration: 0.5,
+      opacity: 0
+    });
+
+    gsap.from(this.container.nativeElement.querySelectorAll('.animate'), {
+      y: '3rem',
+      opacity: 0,
+      delay: 1,
+      stagger: {
+        amount: 0.5
+      }
+    });
   }
 
   onSubmit() {

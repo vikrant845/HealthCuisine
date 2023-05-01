@@ -24,22 +24,24 @@ export class HomeComponent implements OnInit {
       this.triggerScrollAnimations();
     }, 0);
   }
-
+  
   triggerScrollAnimations() {
-    gsap.from(this.container.nativeElement.querySelector('.top-text'), {
-      x: '-4rem',
-      duration: 2,
-      opacity: 0
+    gsap.from(this.container.nativeElement.querySelector('.top-text h1'), {
+      x: (this.container.nativeElement.querySelector('.top-text') as HTMLElement).offsetWidth,
+      delay: 1,
+      duration: 0.8
     });
-    gsap.from(this.container.nativeElement.querySelector('.bottom-text'), {
-      x: '4rem',
-      duration: 2,
-      opacity: 0
+
+    gsap.from(this.container.nativeElement.querySelector('.bottom-text h1'), {
+      x: -(this.container.nativeElement.querySelector('.bottom-text') as HTMLElement).offsetWidth,
+      delay: 1,
+      duration: 0.8
     });
-    gsap.from(this.container.nativeElement.querySelector('.hero-text'), {
-      clipPath: 'inset(0 0 100% 0)',
-      duration: 2
-    });
+
+    // gsap.from(this.container.nativeElement.querySelector('.hero-text'), {
+    //   clipPath: 'inset(0 0 100% 0)',
+    //   duration: 2
+    // });
 
     Array.from(this.container.nativeElement.getElementsByClassName('animate')).forEach(element => {
       gsap.from(element, {
@@ -54,6 +56,12 @@ export class HomeComponent implements OnInit {
         }
       });
     })
+
+    gsap.from(this.container.nativeElement.querySelector('.hero-text p'), {
+      y: (this.container.nativeElement.querySelector('.hero-text') as HTMLElement).offsetHeight,
+      delay: 1,
+      duration: 1
+    });
 
     gsap.from(this.container.nativeElement.querySelectorAll('.slideshow-container > .image'), {
       y: '-3rem',

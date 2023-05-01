@@ -3,6 +3,7 @@ import { AuthService } from '../auth.service';
 import { UserModel } from 'src/models/userModel';
 import { Router } from '@angular/router';
 import { Subscription, catchError, of } from 'rxjs';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-navigation',

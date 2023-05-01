@@ -642,3 +642,240 @@
         height: 40rem;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .container .workout_section img {
+        width: 10%;
+    }
+    
+    .container .workout_section .title {
+        font-size: 2rem;
+    }
+    
+    .container .workout_section .title::before {
+        bottom: 1.5rem;
+        width: 30%;
+    }
+    
+    .container .workout_section .title::after {
+        top: 3.5rem;
+        width: 30%;
+    }
+    
+    .container .workout_section .title p:nth-child(2) {
+        margin: -0.5rem 0 0 2rem;
+    }
+    
+    .container .workout_section .view_all img {
+        height: 1rem;
+        width: 1rem;
+        margin: 0 0 0 1rem;
+        filter: invert(24%) sepia(6%) saturate(4860%) hue-rotate(206deg) brightness(92%) contrast(88%);;
+    }
+    
+    .container .workout_section .workout_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 3rem 0 0 0;
+    }
+    
+    .container .workout_section .workout_container .workout {
+        display: flex;
+        width: 100%;
+        height: 12rem;
+        background: linear-gradient(43deg, #ffbd87, #f06e03);
+        border-radius: 2rem;
+    }
+    
+    .container .workout_section .workout_container .workout img {
+        width: 15rem;
+        height: 15rem;
+        margin: -3rem 0 0 1rem;
+    }
+    
+    .container .workout_section .workout_container .workout:nth-child(2) img {
+        width: 6.5rem;
+        height: 14rem;
+        margin: -1.2rem 6rem 0 1rem;
+    }
+    
+    .container .workout_section .workout_container .workout:nth-child(3) img {
+        width: 15rem;
+        height: 15rem;
+        margin: -2.5rem 3rem 0 -0.3rem;
+    }
+
+    .container .nutrition_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 4rem 0 0 0;
+    }
+    
+    .container .nutrition_section .title {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .container .nutrition_section .title p:nth-child(1) {
+        font-size: 3.5rem;
+        font-weight: 300;
+        letter-spacing: 0rem;
+        margin: 1rem 0 0 0;
+    }
+    
+    .container .nutrition_section .title p:nth-child(2) {
+        font-size: 4.5rem;
+        font-weight: 600;
+        transform: rotate(0);
+        margin: 0;
+    }
+    
+    .container .nutrition_section .flyer1 {
+        width: 90%;
+    }
+    
+    .container .nutrition_section .flyer1 img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .container .nutrition_section .flyer1 .title {
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        font-size: 3rem;
+        z-index: 3;
+    }
+    
+    .container .nutrition_section .flyer1 .title span:not(:first-child) {
+        margin: -0.4rem 0 0 0;
+    }
+    
+    .container .nutrition_section .flyer1 .title span:nth-child(1) {
+        font-size: 1rem;
+    }
+    
+    .container .nutrition_section .flyer1 .paragraph {
+        font-size: 0.8rem;
+    }
+    
+    .container .nutrition_section .flyer1:nth-child(3) .title span:not(:last-child) {
+        margin: 0 1rem -0.5rem 0;
+    }
+
+    .container .shop_container {
+        width: 90%;
+    }
+    
+    .container .shop_container .title {
+        font-size: 3rem;
+    }
+    
+    .container .shop_container .title p:nth-child(2) {
+        font-size: 3.5rem;
+        margin: -0.5rem 0 1rem 0.8rem;
+    }
+    
+    .container .shop_container .item_container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .container .shop_container .item_container .item {
+        width: 100%;
+        height: 13rem;
+    }
+    
+    .container .shop_container .item_container .item img {
+        width: 100%;
+    }
+    
+    .container .shop_container .item_container .item:nth-child(3) img {
+        object-position: 0 -12rem;
+    }
+    
+    .container .shop_container .item_container .item span {
+        font-size: 3rem;
+    }
+    
+    .container .shop_container .item_container .item:nth-child(2) span {
+        left: 25%;
+    }
+    
+    .container .certifications_section .title, .container .pricing_section .title {
+        width: 100%;
+    }
+    
+    .container .certifications_section .title span, .container .pricing_section .title span {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .container .certifications_section .title span::before, .container .pricing_section .title span::before {
+        top: 46%;
+        left: 45%;
+    }
+    
+    .container .certifications_section .title p, .container .pricing_section .title p {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .container .certifications_section .certifications {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-self: center;
+    }
+    
+    .container .certifications_section .certifications .certification {
+        width: 100%;
+        height: 16rem;
+    }
+    
+    .container .certifications_section .certifications .certification img {
+        height: 30%;
+    }
+    
+    .container .certifications_section .certifications .certification:nth-child(2) img {
+        height: 20%;
+    }
+    
+    .container .certifications_section .certifications .certification button {
+        width: 50%;
+    }
+    
+    .container .pricing_section .pricings .pricing {
+        width: 100%;
+        height: 28rem;
+    }
+    
+    .container .pricing_section .pricings .pricing .plan p:nth-child(1) {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    
+    .container .pricing_section .pricings .pricing .features .feature {
+        font-size: 0.8rem;
+    }
+    
+    .container .pricing_section .pricings .pricing button {
+        width: 35%;
+        height: 2rem;
+        border: none;
+        border-radius: 2rem;;
+        background: #ffbd87;
+        margin: 0.5rem 0 0 0;
+        font-weight: 600;
+        color: #413d6b;
+    }
+}

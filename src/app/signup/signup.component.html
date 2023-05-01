@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container" #container>
     <app-navigation></app-navigation>
     <img src="../../assets/Background 2.png" alt="background">
     <p class="title">SIGN UP</p>
     <span></span>
     <form [formGroup]="signUp" (submit)="onSubmit()">
-        <div class="row">
+        <div class="row animate">
             <div class="input">
                 <p class="form_font">First Name *</p>
                 <input formControlName="firstName" type="text" class="form_font">
@@ -16,7 +16,7 @@
                 <p class="error" *ngIf="signUp.get('lastName')?.errors">{{ getErrors(signUp.get('lastName')) }}</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row animate">
             <div>
                 <mat-form-field appearance="fill">
                     <mat-label>Age</mat-label>
@@ -36,7 +36,7 @@
                 <p class="error" *ngIf="signUp.get('gender')?.errors">{{ getErrors(signUp.get('gender')) }}</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row animate">
             <div class="input">
                 <p class="form_font">Email *</p>
                 <input type="text" formControlName="email" class="form_font">
@@ -48,7 +48,7 @@
                 <p class="error" *ngIf="signUp.get('phone')?.errors">{{ getErrors(signUp.get('phone')) }}</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row animate">
             <div class="input">
                 <p class="form_font">Password *</p>
                 <input type="password" formControlName="password" class="form_font">
@@ -60,7 +60,7 @@
                 <p class="error" *ngIf="signUp.get('passwordConfirm')?.errors">{{ getErrors(signUp.get('passwordConfirm')) }}</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row animate">
             <div class="input">
                 <p class="form_font">Username *</p>
                 <input type="text" formControlName="username" class="form_font">
